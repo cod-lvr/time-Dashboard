@@ -1,0 +1,20 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: $Very-dark-blue;
+  padding: 2rem 1rem;
+  margin: 0;
+  color: $Font-color;
+}
+
+button {
+  background-color: transparent;
+  padding: 0.5rem;
+  border: 0;
+  outline: none;
+  font-weight: $font-wight-2;
+  color: $Desaturated-blue;
+  font-size: 15px;
+  &:hover {
+    color: $Pale-Blue;
+  }
+}

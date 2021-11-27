@@ -1,0 +1,44 @@
+#header {
+  background-color: $Dark-blue;
+  border-radius: $border-r;
+  .head-info {
+    background-color: $Blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: $border-r;
+    .photo {
+      background-color: $Font-color;
+      padding: 0.1rem 0.14rem;
+      border-radius: 60%;
+      width: 25%;
+      text-align: center;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .content {
+      width: 55%;
+      margin-left: 1rem;
+      h3 {
+        font-weight: $font-wight-1;
+        font-size: $font-size;
+      }
+      p {
+        color: $Pale-Blue;
+        font-size: 15px;
+      }
+    }
+  }
+  .nav-btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    border-radius: $border-r;
+  }
+}
