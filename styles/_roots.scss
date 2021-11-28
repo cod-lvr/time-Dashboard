@@ -6,6 +6,15 @@ body {
   color: $Font-color;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-top: 1.4rem;
+}
+
 button {
   background-color: transparent;
   padding: 0.5rem;

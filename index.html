@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="icon"
@@ -11,9 +10,25 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script src="./scripts/main.js" defer></script>
     <title>Time tracking dashboard</title>
   </head>
   <body>
+    <template id="card-content">
+      <li class="card">
+        <div class="bg-1 bg">
+          <img src="" alt="" />
+        </div>
+        <div class="card-content">
+          <h4 id="title"></h4>
+          <div class="dots">
+            <img src="./images/icon-ellipsis.svg" alt="" />
+          </div>
+          <h2 id="current"></h2>
+          <p id="previous"></p>
+        </div>
+      </li>
+    </template>
     <header id="header">
       <div class="head-info">
         <div class="photo">
@@ -32,79 +47,7 @@
     </header>
 
     <main id="main">
-      <ul class="cards-container">
-        <li class="card">
-          <div class="bg"></div>
-          <div class="card-content">
-            <h4 id="title">Work</h4>
-            <div class="dots">
-              <div class="dot"></div>
-            </div>
-            <h2 id="current">7hrs</h2>
-            <p id="previous">36hrs</p>
-          </div>
-        </li>
-
-        <li class="card">
-          <div class="bg"></div>
-          <div class="card-content">
-            <h4 id="title">Work</h4>
-            <div class="dots">
-              <div class="dot"></div>
-            </div>
-            <h2 id="current"></h2>
-            <p id="previous"></p>
-          </div>
-        </li>
-
-        <li class="card">
-          <div class="bg"></div>
-          <div class="card-content">
-            <h4 id="title">Work</h4>
-            <div class="dots">
-              <div class="dot"></div>
-            </div>
-            <h2 id="current"></h2>
-            <p id="previous"></p>
-          </div>
-        </li>
-
-        <li class="card">
-          <div class="bg"></div>
-          <div class="card-content">
-            <h4 id="title">Work</h4>
-            <div class="dots">
-              <div class="dot"></div>
-            </div>
-            <h2 id="current"></h2>
-            <p id="previous"></p>
-          </div>
-        </li>
-
-        <li class="card">
-          <div class="bg"></div>
-          <div class="card-content">
-            <h4 id="title">Work</h4>
-            <div class="dots">
-              <div class="dot"></div>
-            </div>
-            <h2 id="current"></h2>
-            <p id="previous"></p>
-          </div>
-        </li>
-
-        <li class="card">
-          <div class="bg"></div>
-          <div class="card-content">
-            <h4 id="title">Work</h4>
-            <div class="dots">
-              <div class="dot"></div>
-            </div>
-            <h2 id="current"></h2>
-            <p id="previous"></p>
-          </div>
-        </li>
-      </ul>
+      <ul class="cards-container"></ul>
     </main>
   </body>
 </html>
