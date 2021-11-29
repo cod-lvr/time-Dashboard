@@ -100,7 +100,62 @@ button:hover {
   border-radius: 14px;
 }
 
-#main {
-  border: 1px solid red;
+#main .cards-container {
+  margin: 1rem 0;
+}
+
+#main .cards-container .card {
+  border-radius: 14px;
+  margin: 2rem 0 0;
+  background-color: green;
+}
+
+#main .cards-container .card .bg {
+  margin: -5px 0;
+  text-align: right;
+}
+
+#main .cards-container .card .bg img {
+  -o-object-fit: inherit;
+     object-fit: inherit;
+  width: 12%;
+  margin-right: 10px;
+}
+
+#main .cards-container .card .card-content {
+  background-color: #1c1f4a;
+  border-radius: 14px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#main .cards-container .card .card-content p {
+  color: #bdc1ff;
+  margin-left: 25px;
+  margin-top: -3px;
+  font-weight: 300;
+}
+
+#main .cards-container .card .card-content img {
+  margin-top: 55px;
+  margin-left: 105px;
+}
+
+#main .cards-container .card .card-content h4 {
+  margin-top: 45px;
+  margin-left: 25px;
+  text-transform: capitalize;
+}
+
+#main .cards-container .card .card-content h2 {
+  margin-left: 25px;
+  margin-top: -10px;
+  font-weight: 300;
+}
+
+#main .cards-container .active {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
