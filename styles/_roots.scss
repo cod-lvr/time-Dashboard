@@ -4,26 +4,36 @@ body {
   padding: 2rem 1rem;
   margin: 0;
   color: $Font-color;
-}
+  @media screen and (min-width: 1440px) {
+    margin: auto;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-li {
-  margin-top: 1.4rem;
-}
+  li {
+    margin-top: 1.4rem;
+  }
 
-button {
-  background-color: transparent;
-  padding: 0.5rem;
-  border: 0;
-  outline: none;
-  font-weight: $font-wight-2;
-  color: $Desaturated-blue;
-  font-size: 15px;
-  &:hover {
-    color: $Pale-Blue;
+  button {
+    background-color: transparent;
+    padding: 0.5rem;
+    border: 0;
+    outline: none;
+    font-weight: $font-wight-2;
+    color: $Desaturated-blue;
+    font-size: 15px;
+    &:hover {
+      color: $Pale-Blue;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 1.5rem;
+    }
   }
 }

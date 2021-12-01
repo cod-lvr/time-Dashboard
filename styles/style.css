@@ -7,16 +7,32 @@ body {
   color: #f5f5f5;
 }
 
-ul {
+@media screen and (min-width: 1440px) {
+  body {
+    margin: auto;
+    padding: 0 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body ul {
   list-style: none;
   padding: 0;
 }
 
-li {
+body li {
   margin-top: 1.4rem;
 }
 
-button {
+body button {
   background-color: transparent;
   padding: 0.5rem;
   border: 0;
@@ -26,8 +42,14 @@ button {
   font-size: 15px;
 }
 
-button:hover {
+body button:hover {
   color: #bdc1ff;
+}
+
+@media screen and (min-width: 1440px) {
+  body button {
+    font-size: 1.5rem;
+  }
 }
 
 #header {
@@ -100,6 +122,74 @@ button:hover {
   border-radius: 14px;
 }
 
+@media (min-width: 1440px) {
+  #header {
+    width: 20%;
+    height: 100%;
+    margin: 5rem auto;
+    min-height: 350px;
+    min-width: 250px;
+  }
+  #header .head-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding: 2rem;
+    border-radius: 14px;
+  }
+  #header .head-info .photo {
+    background-color: #f5f5f5;
+    padding: 0.1rem 0.14rem;
+    border-radius: 60%;
+    width: 50%;
+    text-align: start;
+  }
+  #header .head-info .photo img {
+    width: 100%;
+    display: block;
+  }
+  #header .head-info .content {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  #header .head-info .content h3 {
+    font-weight: 400;
+    font-size: 3rem;
+    margin-top: -10px;
+  }
+  #header .head-info .content p {
+    color: #bdc1ff;
+    font-size: 20px;
+  }
+  #header .nav-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2rem;
+    border-radius: 14px;
+  }
+}
+
 #main .cards-container {
   margin: 1rem 0;
 }
@@ -157,5 +247,80 @@ button:hover {
 
 #main .cards-container .active {
   display: block;
+}
+
+@media screen and (min-width: 1440px) {
+  #main {
+    margin: 0;
+    margin-left: -3rem;
+    min-height: 600px;
+    min-width: 250px;
+  }
+  #main .cards-container {
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+  }
+  #main .cards-container .card {
+    border-radius: 14px;
+    border: 2px solid red;
+    min-height: 280px;
+    min-width: 83px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #main .cards-container .card .bg {
+    margin: 0;
+    text-align: right;
+    min-height: 90px;
+  }
+  #main .cards-container .card .bg img {
+    -o-object-fit: fill;
+       object-fit: fill;
+    width: 60%;
+  }
+  #main .cards-container .card .card-content {
+    min-width: inherit;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    min-height: 200px;
+  }
+  #main .cards-container .card .card-content p {
+    color: #bdc1ff;
+    margin-left: 25px;
+    margin-top: -3px;
+    font-weight: 300;
+  }
+  #main .cards-container .card .card-content img {
+    margin-top: 55px;
+    margin-left: 105px;
+  }
+  #main .cards-container .card .card-content h4 {
+    margin-top: 45px;
+    margin-left: 25px;
+    text-transform: capitalize;
+  }
+  #main .cards-container .card .card-content h2 {
+    margin-left: 25px;
+    margin-top: -10px;
+    font-weight: 300;
+  }
 }
 /*# sourceMappingURL=style.css.map */

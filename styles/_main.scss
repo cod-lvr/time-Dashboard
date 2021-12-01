@@ -45,4 +45,62 @@
       display: block;
     }
   }
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+    margin-left: -3rem;
+    min-height: 600px;
+    min-width: 250px;
+    .cards-container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.5rem;
+      .card {
+        border-radius: $border-r;
+        border: 2px solid red;
+        min-height: 280px;
+        min-width: 83px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        .bg {
+          margin: 0;
+          text-align: right;
+          min-height: 90px;
+          img {
+            object-fit: fill;
+            width: 60%;
+          }
+        }
+        .card-content {
+          min-width: inherit;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          min-height: 200px;
+          p {
+            color: $Pale-Blue;
+            margin-left: 25px;
+            margin-top: -3px;
+            font-weight: $font-wight-1;
+          }
+          img {
+            margin-top: 55px;
+            margin-left: 105px;
+          }
+          h4 {
+            margin-top: 45px;
+            margin-left: 25px;
+            text-transform: capitalize;
+          }
+          h2 {
+            margin-left: 25px;
+            margin-top: -10px;
+            font-weight: $font-wight-1;
+          }
+        }
+      }
+    }
+  }
 }
