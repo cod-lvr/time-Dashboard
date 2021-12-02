@@ -3,8 +3,7 @@
     margin: 1rem 0;
     .card {
       border-radius: $border-r;
-      margin: 2rem 0 0;
-      background-color: green;
+      margin-top: 1rem;
       .bg {
         margin: -5px 0;
         text-align: right;
@@ -17,26 +16,20 @@
       .card-content {
         background-color: $Dark-blue;
         border-radius: $border-r;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        p {
-          color: $Pale-Blue;
-          margin-left: 25px;
-          margin-top: -3px;
-          font-weight: $font-wight-1;
-        }
-        img {
-          margin-top: 55px;
-          margin-left: 105px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        .title-cont,
+        .time {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
         }
         h4 {
-          margin-top: 45px;
-          margin-left: 25px;
           text-transform: capitalize;
         }
         h2 {
-          margin-left: 25px;
-          margin-top: -10px;
           font-weight: $font-wight-1;
         }
       }
@@ -45,21 +38,24 @@
       display: block;
     }
   }
-  @media screen and (min-width: 1440px) {
+  @media (min-width: 1440px) {
     margin: 0;
-    margin-left: -3rem;
-    min-height: 600px;
-    min-width: 250px;
+    padding: 0 1rem;
+
+    width: 70%;
+    height: 100%;
     .cards-container {
-      height: 100%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
       .card {
+        display: inline-block;
+        margin: 10px 0 0 2%;
+        flex-grow: 1;
+        height: 300px;
+        width: calc(100% * (1 / 4) - 10px - 1px);
         border-radius: $border-r;
-        border: 2px solid red;
-        min-height: 280px;
-        min-width: 83px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -68,35 +64,36 @@
         .bg {
           margin: 0;
           text-align: right;
-          min-height: 90px;
           img {
             object-fit: fill;
-            width: 60%;
+            width: 100%;
+            display: inline-block;
           }
         }
         .card-content {
-          min-width: inherit;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          min-height: 200px;
-          p {
-            color: $Pale-Blue;
-            margin-left: 25px;
-            margin-top: -3px;
-            font-weight: $font-wight-1;
+          height: 70%;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          .title-cont {
+            display: flex;
+            flex-direction: row;
+            text-align: left;
+            align-items: flex-start;
+            justify-content: space-between;
           }
-          img {
-            margin-top: 55px;
-            margin-left: 105px;
-          }
-          h4 {
-            margin-top: 45px;
-            margin-left: 25px;
-            text-transform: capitalize;
+          .time {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            align-items: flex-start;
+            justify-content: flex-start;
           }
           h2 {
-            margin-left: 25px;
-            margin-top: -10px;
+            font-size: 40px;
             font-weight: $font-wight-1;
           }
         }
